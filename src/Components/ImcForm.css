@@ -284,6 +284,12 @@ button::before{
         h1 {
             font-size: 1.6rem;
         }
+        input:hover{
+            width: 70%;
+        }
+        .result h2{
+            top: -14px;
+        }
         
     .result-value {
         font-size: 2rem;
