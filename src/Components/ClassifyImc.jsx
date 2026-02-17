@@ -48,14 +48,14 @@ const ClassifyImc = ({ imcUser }) => {
     classification = "over4";
   }
 
-  const current = classifications[classification]; 
+  const current = classifications[classification];
 
   return (
-   <>
-      <div className= {`classification ${current.animation}`}>
+    <>
+      <div className={`classification ${current.animation}`}>
         <h3 className={current.color}>{current.label}</h3>
       </div>
-   </>
+    </>
   );
 };
 
