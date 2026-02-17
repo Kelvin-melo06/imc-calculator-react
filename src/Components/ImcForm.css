@@ -140,7 +140,6 @@ input:focus {
 }
 
 input:hover {
-  transform: scale(1.02);
   padding: 16px;
   margin-top: 10px;
   background: linear-gradient(135deg, #7b2cbf 0%, #9d4edd 50%, #c77dff 100%);
@@ -314,11 +313,3 @@ button:active {
   }
 }
 
-@media (hover: hover) {
-  input:hover {
-    transform: scale(1.02);
-  }
-  button:hover {
-    transform: translateY(-2px);
-  }
-}
