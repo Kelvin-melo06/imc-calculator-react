@@ -290,8 +290,8 @@ button::before{
         .result h2{
             top: -14px;
         }
-        
-    .result-value {
-        font-size: 2rem;
-    }
+        body{
+            min-height: 100dvh;
+            min-height: 100vh;
+        }
 }
