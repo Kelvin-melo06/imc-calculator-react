@@ -2,6 +2,7 @@ body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,9 +290,5 @@ button::before{
         }
         .result h2{
             top: -14px;
-        }
-        body{
-            min-height: 100dvh;
-            min-height: 100vh;
         }
 }
