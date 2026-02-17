@@ -5,11 +5,9 @@
 body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
     min-height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     background: linear-gradient(135deg, #0a0015 0%, #1a0a2e 50%, #16213e 100%);
     position: relative;
     overflow-x: hidden;
@@ -289,10 +287,16 @@ button::before{
         h1 {
             font-size: 1.6rem;
         }
-        input:hover{
-            width: 85%;
-        }
         .result h2{
             top: -14px;
         }
 }
+
+    @media (hover : hover){
+        input:hover{
+            transform: scale(1.02);
+        }
+        button:hover{
+            transform: translateY(-2px);
+        }
+    }
