@@ -28,11 +28,9 @@ const MyImcForm = () => {
         <div className="input-group">
           <label htmlFor="altura">Altura(cm)</label>
           <input
-            type="number"
+            type="text"
             id="altura"
             placeholder="Ex: 175"
-            step={0.1}
-            min={0}
             value={height}
             onChange={(e) => setHeight(e.target.value)}
           />
@@ -42,11 +40,9 @@ const MyImcForm = () => {
             Peso(kg)
           </label>
           <input
-            type="number"
+            type="text"
             id="peso"
             placeholder="Ex: 70"
-            step={0.1}
-            min={0}
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
           />
