@@ -8,9 +8,12 @@ const MyImcForm = () => {
   const [imc, setImc] = useState(null);
 
   const ImcCalcule = () => {
-    if (height > 0 && weight > 0) {
-      const heightInMeters = Number(height) / 100;
-      const calculatedImc = Number(weight) / (heightInMeters * heightInMeters);
+    const heightNumberFloat = +height.replace(",", ".");
+    const weightNumberFloat = +weight.replace(",", ".");
+    if (heightNumberFloat > 0 && weightNumberFloat > 0) {
+      const heightInMeters = heightNumberFloat / 100;
+      const calculatedImc =
+        weightNumberFloat / (heightInMeters * heightInMeters);
       setImc(Number(calculatedImc.toFixed(2)));
 
       setHeight("");
@@ -18,6 +21,20 @@ const MyImcForm = () => {
     } else {
       alert("Por favor, insira valores válidos para altura e peso.");
     }
+  };
+
+  const validArguments = (value) => {
+    return value.replace(/[^0-9]/g, "");
+  };
+
+  const handleValiHeight = (e) => {
+    const validHeight = validArguments(e.target.value);
+    setHeight(validHeight);
+  };
+
+  const handleValiWeight = (e) => {
+    const validWeight = validArguments(e.target.value);
+    setWeight(validWeight);
   };
 
   return (
@@ -32,7 +49,7 @@ const MyImcForm = () => {
             id="altura"
             placeholder="Ex: 175"
             value={height}
-            onChange={(e) => setHeight(e.target.value)}
+            onChange={(e) => handleValiHeight(e)}
           />
         </div>
         <div className="input-group">
@@ -44,7 +61,7 @@ const MyImcForm = () => {
             id="peso"
             placeholder="Ex: 70"
             value={weight}
-            onChange={(e) => setWeight(e.target.value)}
+            onChange={(e) => handleValiWeight(e)}
           />
         </div>
 

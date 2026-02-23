@@ -41,7 +41,7 @@ const ClassifyImc = ({ imcUser }) => {
   } else if (imcUser >= 25 && imcUser < 30) {
     classification = "over1";
   } else if (imcUser >= 30 && imcUser < 35) {
-    classification = "over2 ";
+    classification = "over2";
   } else if (imcUser >= 35 && imcUser < 40) {
     classification = "over3";
   } else {
